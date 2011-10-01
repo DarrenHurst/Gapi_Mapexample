@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="styles.css" />
+<style type="text/css">
+  html { height: 100%;  }
+  body { height: 100%;margin: 0; padding: 0 }
+  #map_canvas { height: 100% }
+  #control_cnavas { position:absolute;bottom:0;text-align:center;}
+</style>
+<script type="text/javascript"
+    src="http://maps.googleapis.com/maps/api/js?sensor=true">
+</script>
+<script type="text/javascript">
+// Create our "tiny" marker icon
+
+
+
+var latlng = new google.maps.LatLng(43.687391,-79.589158);
+  function initialize() {
+   
+    var myOptions = {
+      zoom: 14,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+	citymarkers("T",map);
+ 
+  }
+  /*  
+CALGARY – CLOSED
+ 
+EDMONTON –
+Self Park – 8410-43 Street Leduc, AB
+ 
+HALIFAX –
+Self Park – 668 Barnes Drive Enfield, NS
+ 
+MONTREAL –
+Valet Parc – 12155, chemin Cote-de Liesse, Dorval, QUE
+Service Express A – 700 rue Marshall, Dorval, QUE
+Service Express B – 630, avenue Michel Jasmin, Dorval, QUE
+ 
+OTTAWA –
+Self Park – 3600 Uplands Drive, Gloucester, ON
+ 
+TORONTO –
+Valet – 5815 Airport Rd, Mississauga, ON
+Self Park – 933 Dixon Rd, Etobicoke, ON
+Economy – 626 Dixon Rd, Etobicoke, ON
+ 
+VANCOUVER –
+Valet – 6380 Miller Rd, Richmond, BC
+   */
+  function vancouver(){
+	  var latlng = new google.maps.LatLng(49.191863,-123.151987);
+
+   
+    var myOptions = {
+      zoom: 14,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+	citymarkers("V",map);
+ 
+  
+  }
+  function montreal(){
+  	  var latlng = new google.maps.LatLng(45.454239,-73.736068);
+ var myOptions = {
+      zoom: 14,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+	citymarkers("M",map);
+  }
+  function ottawa(){
+		  var latlng = new google.maps.LatLng(45.341708,-75.664054);
+    var myOptions = {
+      zoom: 14,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+	citymarkers("O",map);  
+  }
+  function toronto(){
+	  var latlng = new google.maps.LatLng(43.687391,-79.589158);
+	     var myOptions = {
+      zoom: 14,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+	citymarkers("T",map);
+ 
+  }
+  function edmonton(){
+		  var latlng = new google.maps.LatLng(53.308594,-113.537215);
+  var myOptions = {
+      zoom: 14,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+	citymarkers("E",map);  
+  }
+  function halifax(){
+  	  var latlng = new google.maps.LatLng(44.876791,-63.524184);
+ var myOptions = {
+      zoom: 14,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+	citymarkers("H",map);
+  }
+  function citymarkers(city,map){
+    if (city =="T"){
+		
+		var latmarker1 = new google.maps.LatLng(43.68607,-79.606052);
+		var marker1 = new google.maps.Marker({
+      position: latmarker1, 
+      map: map, 
+	  icon: "parkmarker.png",
+      title:"Valet  5815 Airport Rd, Mississauga, ON" }); 
+	  var latmarker2 = new google.maps.LatLng(43.68663,-79.596927);
+		var marker2 = new google.maps.Marker({
+      position: latmarker2, 
+      map: map,
+	  icon: "parkmarker.png", 
+      title:"Self Park  933 Dixon Rd, Etobicoke, ON" });  
+	  var latmarker3 = new google.maps.LatLng(43.6908,-79.574997);
+		var marker3 = new google.maps.Marker({
+      position: latmarker3, 
+      map: map,
+	  icon: "parkmarker.png",
+      title:"Economy 626 Dixon Rd, Etobicoke, ON" });   
+	}
+	if (city =="V"){
+	var latmarker1 = new google.maps.LatLng(49.191863,-123.151987);
+		var marker1 = new google.maps.Marker({
+      position: latmarker1, 
+      map: map, icon: "parkmarker.png", 
+      title:"Valet  6380 Miller Rd, Richmond, BC" }); 
+	
+	}
+	if (city =="E"){
+	var latmarker1 = new google.maps.LatLng(53.308594,-113.537215);
+		var marker1 = new google.maps.Marker({
+      position: latmarker1, 
+      map: map, icon: "parkmarker.png", 
+      title:"Self Park  8410-43 Street Leduc, AB" }); 
+	
+	}
+	if (city =="H"){
+	var latmarker1 = new google.maps.LatLng(44.876791,-63.524184);
+		var marker1 = new google.maps.Marker({
+      position: latmarker1, 
+      map: map, icon: "parkmarker.png", 
+      title:"Self Park  668 Barnes Drive Enfield, NS" }); 
+	
+	}
+	if (city =="O"){
+	var latmarker1 = new google.maps.LatLng(45.341708,-75.664054);
+		var marker1 = new google.maps.Marker({
+      position: latmarker1, 
+      map: map, icon: "parkmarker.png", 
+      title:"Self Park 3600 Uplands Drive, Gloucester, ON" }); 
+	
+	}
+	if (city =="M"){
+		/*
+Valet Parc – 12155, chemin Cote-de Liesse, Dorval, QUE
+Service Express A – 700 rue Marshall, Dorval, QUE
+Service Express B – 630, avenue Michel Jasmin, Dorval, QUE
+*/
+	var latmarker1 = new google.maps.LatLng(45.454239,-73.736068);
+		var marker1 = new google.maps.Marker({
+      position: latmarker1, 
+      map: map, icon: "parkmarker.png", 
+      title:"Valet Parc 12155, chemin Cote-de Liesse, Dorval, QUE" }); 
+	  
+	  var latmarker2 = new google.maps.LatLng(45.455209,-73.735986);
+		var marker2 = new google.maps.Marker({
+      position: latmarker2, 
+      map: map, icon: "parkmarker.png", 
+      title:"Service Express A 700 rue Marshall, Dorval, QUE" }); 
+	  
+	  var latmarker3 = new google.maps.LatLng(45.451211,-73.738498);
+		var marker3 = new google.maps.Marker({
+      position: latmarker3, 
+      map: map, icon: "parkmarker.png", 
+      title:"Service Express B 630, avenue Michel Jasmin, Dorval, QUE" }); 
+	
+	}
+  }
+    
+
+</script>
+</head>
+<body onload="initialize()">
+<div style="height:75px;padding:5px 5px 5px 5px;">
+<div >
+<img id="logo" src="pnf.icon.jpg" alt="Park'N Fly" height="75" width="75" />
+</div>
+<div id="controls" style="width:350px; padding-top:3px;color:#fff;font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;font-size:18px;">
+Park'N Fly Locations <br />
+  <button onclick="vancouver()" class="small green awesome" >Vancouver</button>
+  <button onclick="toronto()" class="small green awesome">Toronto</button>
+   <button onclick="montreal()" class="small green awesome">Montreal</button>
+    <button onclick="edmonton()" class="small green awesome">Edmonton</button>
+     <button onclick="halifax()" class="small green awesome">Halifax</button>
+      <button onclick="ottawa()" class="small green awesome">Ottawa</button>
+      </div></div>
+      <br/>
+  <div id="map_canvas" style="width:100%; height:100%"></div>
+  
+  <div id="control_canvas" style="width:100%; height:100%"></div>
+</body>
+</html>

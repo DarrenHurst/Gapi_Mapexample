@@ -1,0 +1,65 @@
+@media screen and (max-device-width: 480px){
+body{
+  -webkit-text-size-adjust:none;
+ 
+  padding:5px;
+}
+
+div{
+  clear:both!important;
+  display:block!important;
+  width:100%;
+  float:none!important;
+  margin:0!important;
+  padding:0!important;
+}
+}
+#people{
+	background-image: url('p.png');
+}
+body
+{
+	background-color: #2eb135;
+}
+	
+.titlefield{color: #005e7c;}/** RSS FEED **/
+.labelfield{ color:#8fc659; font-size: 11pt; }
+.datefield{ color:#666; font-size: 9pt; display:inline-block;}
+#rssfeeds a{ text-decoration: none;font-weight: bold;}
+#rssfeeds p{ -webkit-border-radius: 5px;-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); margin-bottom: 15px; background-color:#EEE; padding:4px 4px 4px 4px;}
+code{ color: red;}
+#rssfeed-wrap {text-align:left; margin-left:15px;  padding:5px 5px 5px 5px; width:300px; }
+
+.apply{ float:right; color:#fff; display:inline-block;}
+
+h2{color:#AAA;text-shadow: 0 -1px 5px rgba(0,0,0,0.25);padding-left:20px;padding-top:20px;}
+
+/* Rounded box logo */
+#logo{margin:9px 9px 9px 9px;-moz-border-radius: 2px; -webkit-border-radius: 2px; -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.12);-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.12);text-shadow: 0 -1px 3px rgba(0,0,0,0.25);margin-right:15px; float:left;}
+
+/*Grey Rounded box */
+#box { -moz-border-radius: 5px; -webkit-border-radius: 5px;-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);padding: 5px 5px 6px; background-color: #DDD; }
+
+/* button style */
+
+.awesome, .awesome:visited {display: inline-block; padding: 5px 10px 6px 5px; color: #fff; text-decoration: none;-moz-border-radius: 5px; -webkit-border-radius: 5px;-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.12);-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12);text-shadow: 0 -1px 1px rgba(0,0,0,0.25);border-bottom: 1px solid rgba(0,0,0,0.25);font-family: Helvetica;position: relative;cursor: pointer;}
+ 
+	.awesome:hover							{ background-color: #111; color: #fff; }
+	.awesome:active							{ top: 1px; }
+	.small.awesome, .small.awesome:visited 			{ font-size: 11px; padding: ; }
+	.awesome, .awesome:visited,
+	.medium.awesome, .medium.awesome:visited 		{ font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
+	.large.awesome, .large.awesome:visited 			{ font-size: 14px; padding: 8px 14px 9px; }
+	
+	.green.awesome, .green.awesome:visited		{ background-color: #007836; }
+	.green.awesome:hover						{ background-color: #39892f; }
+	.blue.awesome, .blue.awesome:visited		{ background-color: #005e7c; }
+	.blue.awesome:hover							{ background-color: #005e7c; }
+	.red.awesome, .red.awesome:visited			{ background-color: #8fc659; }
+	.red.awesome:hover							{ background-color: #8fc959; }
+	.magenta.awesome, .magenta.awesome:visited		{ background-color: #a9014b; }
+	.magenta.awesome:hover							{ background-color: #630030; }
+	.orange.awesome, .orange.awesome:visited		{ background-color: #BBB; }
+	.orange.awesome:hover							{ background-color: #333; }
+	.yellow.awesome, .yellow.awesome:visited		{ background-color: #ffb515; }
+	.yellow.awesome:hover	
